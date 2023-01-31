@@ -1,0 +1,18 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/animation';
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	height: 900px;
+	width: 500px;
+	padding: 30px;
+	margin: 0 auto;
+	max-width: 560px;
+	width: 100%;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
