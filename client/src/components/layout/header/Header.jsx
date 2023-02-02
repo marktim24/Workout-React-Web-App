@@ -1,15 +1,13 @@
+import { Hamburger } from '../../images/header/hamburger.svg'
 import styles from './Header.module.scss'
-import { Hamburger } from '/client/public/hamburger.svg'
 
 const Header = ({ backLink }) => {
 	/* TODO: router */
-	const { isAuth } = useAuth()
+	// const { isAuth } = useAuth()d
 	return (
-		<header className={styles.Header}>
-			<button>
-				<img src={Hamburger}></img>
-			</button>
-		</header>
+		<div className={styles.header}>
+			<Hamburger />
+		</div>
 	)
 }
 
