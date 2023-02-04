@@ -1,4 +1,4 @@
-import { Hamburger } from '../../images/header/hamburger.svg'
+import { ReactComponent as Hamburger } from '../../images/header/hamburger.svg'
 import styles from './Header.module.scss'
 
 const Header = ({ backLink }) => {
