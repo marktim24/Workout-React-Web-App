@@ -1,13 +1,17 @@
-import { ReactComponent as MenuHamburger } from '../../images/header/hamburger.svg'
+import { useState } from 'react'
+import { CgMenuRight } from 'react-icons/cg'
 import styles from './Hamburger.module.scss'
+import Menu from './Menu'
 
 const Hamburger = () => {
-	const [isShow, SetIsShow] = useState(false)
+	const [isShow, setIsShow] = useState(false)
+
 	return (
 		<div className={styles.wrapper}>
-			<button onClick={() => SetIsShow(!isShow)}>
-				{isShow ? <IoClose color='white' /> : <MenuHamburger />}
+			<button onClick={() => setIsShow(!isShow)}>
+				{isShow ? <IoClose color='white' /> : <CgMenuRight />}
 			</button>
+			<Menu isShow={isShow} />
 		</div>
 	)
 }

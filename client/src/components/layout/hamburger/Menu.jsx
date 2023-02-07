@@ -1,18 +1,24 @@
+import { GrFormClose } from 'react-icons/gr'
 import styles from './Hamburger.module.scss'
+import { menu } from './menu.data'
 
-const Menu = () => {
+const Menu = isShow => {
+	const handleLogout = () => {}
 	return (
-		<nav className={`${styles.menu} ${isComponentVisible}`}>
+		<nav
+			className={GrFormClose(styles.menu, {
+				[styles.show]: isShow
+			})}
+		>
 			<ul>
-				{menu.map((item, index) => {
+				{menu.map((item, index) => (
 					<li key={`_menu_${index}`}>
 						<Link to={item.link}>{item.title}</Link>
 					</li>
-				})}
+				))}
 				<li>
-					<button onClick={}></button>
+					<button onClick={handleLogout}>Logout</button>
 				</li>
-
 			</ul>
 		</nav>
 	)
