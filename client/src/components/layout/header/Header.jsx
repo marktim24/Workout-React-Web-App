@@ -1,4 +1,4 @@
-import { CgProfile } from 'react-icons/cg'
+import { IoMdArrowBack } from 'react-icons/io'
 import { useAuth } from '../../../hooks/useAuth'
 import Hamburger from '../hamburger/Hamburger'
 import styles from './Header.module.scss'
@@ -9,7 +9,7 @@ const Header = ({ backLink }) => {
 	return (
 		<div className={styles.header}>
 			<button onClick={() => {}}>
-				<CgProfile />
+				<IoMdArrowBack />
 			</button>
 			<Hamburger />
 		</div>

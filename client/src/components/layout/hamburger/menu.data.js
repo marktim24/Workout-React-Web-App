@@ -10,10 +10,5 @@ export const menu = [
 	{
 		title: 'Profile',
 		link: '/profile'
-	},
-
-	{
-		title: 'Logout',
-		link: '/logout'
 	}
 ]
