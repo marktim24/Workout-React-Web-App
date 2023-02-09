@@ -4,21 +4,42 @@
 .wrapper {
 	position: relative;
 	button {
-		border: none;
+		background-color: transparent;
+		color: $white;
 		outline: none;
+		border: none;
 		cursor: pointer;
+	}
+	> button {
+		font-size: 30px;
+		> svg > path {
+			fill: $white;
+		}
 	}
 	.menu {
 		position: absolute;
 		right: 0;
+		color: $background;
 		background-color: $white;
+		padding: 10px 10px;
 		font-size: 16px;
+		min-width: 120px;
 		display: none;
 		&.show {
 			display: block;
 		}
 		> ul {
 			list-style-type: none;
+			a {
+				color: $background;
+				text-decoration: none;
+				transition: color 0.4s ease;
+				&:hover,
+				&.active {
+					color: $accent;
+					margin: 4px 0;
+				}
+			}
 		}
 	}
 	background-repeat: no-repeat;

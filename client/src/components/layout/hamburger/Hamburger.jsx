@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { CgMenuRight } from 'react-icons/cg'
+import { GrFormClose } from 'react-icons/gr'
+import { HiMenu } from 'react-icons/hi'
 import styles from './Hamburger.module.scss'
 import Menu from './Menu'
 
@@ -9,7 +10,7 @@ const Hamburger = () => {
 	return (
 		<div className={styles.wrapper}>
 			<button onClick={() => setIsShow(!isShow)}>
-				{isShow ? <IoClose color='white' /> : <CgMenuRight />}
+				{isShow ? <GrFormClose /> : <HiMenu />}
 			</button>
 			<Menu isShow={isShow} />
 		</div>
