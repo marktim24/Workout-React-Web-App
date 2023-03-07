@@ -11,6 +11,7 @@
 		"/hooks",
 		"/screens",
 		"/components",
+		"/ui",
 		"/module.scss",
 		"^../(.*)",
 		"^./(.*)"

@@ -5,13 +5,18 @@
 	align-items: center;
 	justify-content: space-between;
 	> button {
+		margin: 0;
+		padding: 0;
 		cursor: pointer;
 		background-color: transparent;
 		outline: none;
 		border: none;
-		font-size: 30px;
+		font-size: 48px;
 		> svg {
 			fill: $white;
+		}
+		&:hover {
+			background-color: transparent;
 		}
 	}
 }

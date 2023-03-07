@@ -1,29 +1,33 @@
 import Auth from '../components/layout/screens/auth/Auth'
 import Home from '../components/layout/screens/home/Home'
+import NewWorkout from '../components/layout/screens/new-workout/NewWorkouts'
+import Profile from '../components/layout/screens/profile/Profile'
 
 export const routes = [
 	{
 		path: '/',
-		exact: true,
 		component: Home,
-		auth: false
+		isAuth: false
 	},
 	{
-		path: '/',
+		path: '/auth',
 		exact: false,
 		component: Auth,
-		auth: false
+		isAuth: false
 	},
 	{
-		path: '/',
-		exact: true,
-		component: NewWokouts,
-		auth: true
+		path: '/new-workout',
+		component: NewWorkout,
+		isAuth: false
 	},
 	{
-		path: '/',
-		exact: true,
+		path: '/profile',
 		component: Profile,
-		auth: false
+		isAuth: false
+	},
+	{
+		path: '/auth',
+		component: Auth,
+		isAuth: false
 	}
 ]

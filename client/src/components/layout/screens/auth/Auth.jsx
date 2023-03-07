@@ -1,7 +1,8 @@
 import React from 'react'
+import Layout from '../../Layout'
 
 const Auth = () => {
-	return <div>Auth</div>
+	return <Layout>Auth</Layout>
 }
 
 export default Auth

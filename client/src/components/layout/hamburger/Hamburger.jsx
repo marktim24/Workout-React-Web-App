@@ -1,6 +1,8 @@
-import { GrFormClose } from 'react-icons/gr'
 import { HiMenu } from 'react-icons/hi'
+import { IoIosClose } from 'react-icons/io'
+
 import { useOnClickOutside } from '../../../hooks/useOnClickOutside'
+
 import styles from './Hamburger.module.scss'
 import Menu from './Menu'
 
@@ -10,7 +12,7 @@ const Hamburger = () => {
 	return (
 		<div className={styles.wrapper} ref={ref}>
 			<button onClick={() => setIsShow(!isShow)}>
-				{isShow ? <GrFormClose /> : <HiMenu />}
+				{isShow ? <IoIosClose /> : <HiMenu />}
 			</button>
 			<Menu isShow={isShow} />
 		</div>

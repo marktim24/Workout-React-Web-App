@@ -4,13 +4,18 @@
 .wrapper {
 	position: relative;
 	button {
+		padding: 0;
 		background-color: transparent;
 		outline: none;
 		border: none;
 		cursor: pointer;
+		&:hover {
+			background-color: transparent;
+		}
 	}
 	> button {
-		font-size: 30px;
+		font-size: 44px;
+
 		> svg > path {
 			fill: $white;
 		}
@@ -20,8 +25,9 @@
 		right: 0;
 		color: $background;
 		background-color: $white;
-		padding: 10px 10px;
+		padding: 15px;
 		font-size: 16px;
+		border-radius: 12px 0 12px 12px;
 		min-width: 120px;
 		display: none;
 		&.show {
@@ -29,6 +35,10 @@
 		}
 		> ul {
 			list-style-type: none;
+			button {
+				font-size: 16px;
+				color: $background;
+			}
 			a {
 				color: $background;
 				text-decoration: none;

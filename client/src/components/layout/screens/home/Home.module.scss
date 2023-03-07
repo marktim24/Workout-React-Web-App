@@ -1,0 +1,12 @@
+@import 'src/assets/styles/variables';
+
+.heading {
+	margin: 50px auto;
+	text-align: center;
+	font-size: 36px;
+	color: $white;
+	line-height: 1.5;
+	@media (max-width: 450px) {
+		font-size: 26px;
+	}
+}
