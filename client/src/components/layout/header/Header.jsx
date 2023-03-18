@@ -27,7 +27,7 @@ const Header = ({ backLink = '/' }) => {
 			) : (
 				<button
 					onClick={() => {
-						navigate('/Profile')
+						navigate(isAuth ? '/Profile' : '/Auth')
 					}}
 				>
 					<RiUserSmileLine />
