@@ -6,11 +6,13 @@ import Form from '../../../ui/form/Form'
 import Loader from '../../../ui/loader/Loader'
 import styles from './Auth.module.scss'
 
+import { useMutation } from '@tanstack/react-query'
+import AuthService from '../../../../services/auth.service'
 import Layout from '../../Layout'
 const isLoading = false
 const isLoadingAuth = false
 const Auth = () => {
-	const [type, setType] = useState('auth')
+	const [type, setType] = useState('login')
 	const {
 		register,
 		handleSubmit,
@@ -18,9 +20,18 @@ const Auth = () => {
 	} = useForm({
 		mode: 'onChange'
 	})
+
+	const { mutate, isLoading } = useMutation(
+		['login'],
+		() => AuthService.main(email, password, type),
+		{
+			onSuccess: data => {
+				alert('success')
+			}
+		}
+	)
 	const onSubmit = data => {
-		// TODO: Type
-		console.log(data)
+		mutate(data.email, data.password)
 	}
 	return (
 		<>
